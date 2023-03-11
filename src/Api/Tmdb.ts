@@ -4,6 +4,7 @@ const API_KEY = "e84540b93410e7b9a5711cc9814026e6";
 const API_BASE = "https://api.themoviedb.org/3";
 const API_LING = "pt-BR";
 
+
 export const basicFetch = async (endpoint?: string) => {
   const response = await axios.get(`${API_BASE}${endpoint}`);
   return response.data;
@@ -12,13 +13,13 @@ export const basicFetch = async (endpoint?: string) => {
 export default {
   getHomeList: async () => {
     return [
-      {
-        slug: "generos",
-        title: "todos all",
-        items: await basicFetch(
-          `/genre/movie/list?api_key=${API_KEY}&language=${API_LING}`
-        ),
-      },
+      // {
+      //   slug: "generos",
+      //   title: "todos all",
+      //   items: await basicFetch(
+      //     `/genre/movie/list?api_key=${API_KEY}&language=${API_LING}`
+      //   ),
+      // },
       {
         slug: "originais",
         title: "Originais da Netflix",
