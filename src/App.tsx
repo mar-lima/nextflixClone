@@ -18,6 +18,10 @@ const App = () => {
   return (
     <S.App>
       O inicio de tudo
+
+      header
+      destaque
+      as listas por generos 
     </S.App>
   )
 }
