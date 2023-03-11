@@ -1,13 +1,14 @@
 {
   "name": "nextflixclone",
-  "homepage": "https://mar-lima.github.io/nextflixClone/",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://mar-lima.github.io/nextflixClone/",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "npm run build && gh-pages -d dist",
     "build": "tsc && vite build",
-    "deploy": "npm run build && gh-pages -d dist" ,
     "preview": "vite preview"
   },
   "dependencies": {
