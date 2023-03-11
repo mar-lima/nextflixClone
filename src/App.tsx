@@ -17,7 +17,7 @@ const App = () => {
   }, []);
   return (
     <S.App>
-      asdasd
+      O inicio de tudo
     </S.App>
   )
 }
