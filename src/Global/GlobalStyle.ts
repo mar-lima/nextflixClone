@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
     * {
         box-sizing: border-box;
         margin: 0;
@@ -9,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     body{
         background-color: #202120;
         color: #fff;
+        font-family: "Roboto", sans-serif;
     }
 
 `
