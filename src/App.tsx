@@ -1,14 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import "./App.styled.ts";
+import Tmdb from "./Api/Tmdb";
+import * as S from './App.styled'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+
+const App = () => {
+  useEffect(() => {
+    const loadAll = async () => {
+      let list = await Tmdb.getHomeList();
+  
+      console.log(list);
+    };
+  
+    loadAll();
+  }, []);
   return (
-    <div className="App">
-      .,..
-    </div>
+    <S.App>
+      asdasd
+    </S.App>
   )
 }
 
