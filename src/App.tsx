@@ -24,7 +24,7 @@ const App = () => {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
-      header destaque as listas por generos
+      header destaque as listas por generos.
     </S.App>
   );
 };
