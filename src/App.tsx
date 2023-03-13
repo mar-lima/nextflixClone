@@ -5,7 +5,8 @@ import * as S from "./App.styled";
 import { list } from "./Types/List";
 import MovieRow from "./components/MovieRow/MovieRow";
 import FeaturedMovie from "./components/FeaturedMovie/FeaturedMovie";
-import { featureid } from "./Types/featureid";
+import { ThemeProvider } from "styled-components";
+import light from "./styles/theme";
 
 const App = () => {
   const [movieList, setmovieList] = useState<list[]>([]);
@@ -29,15 +30,17 @@ const App = () => {
     loadAll();
   }, []);
   return (
-    <S.App>
-      {featureData && <FeaturedMovie item={featureData} />}
-      <section className="lists">
-        {movieList.map((item, key) => (
-          <MovieRow key={key} title={item.title} items={item.items} />
-        ))}
-      </section>
-      header destaque as listas por generos.
-    </S.App>
+    <ThemeProvider theme={light}>
+      <S.App>
+        {featureData && <FeaturedMovie item={featureData} />}
+        <S.Lists>
+          {movieList.map((item, key) => (
+            <MovieRow key={key} title={item.title} items={item.items} />
+          ))}
+        </S.Lists>
+        header destaque as listas por generos.
+      </S.App>
+    </ThemeProvider>
   );
 };
 
